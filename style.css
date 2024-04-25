@@ -1,0 +1,89 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card {
+    margin-bottom: 2%; /* 각 카드 사이에 충분한 공간 제공 */
+    border-radius: 1%; /* 카드의 모서리를 둥글게 처리 */
+    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); /* 약간의 그림자로 깊이감 추가 */
+    overflow: hidden; /* 이미지가 둥근 모서리에 맞춰 자르기 */
+}
+
+.card-img-top {
+    width: 100%; /* 이미지 너비를 카드 너비에 맞춤 */
+    height: auto; /* 이미지 비율을 유지 */
+    border-top-left-radius: 1%; /* 이미지 상단 둥근 처리 */
+    border-top-right-radius: 1%;
+}
+
+.card-body {
+    padding: 1.5%; /* 카드 내부 패딩 */
+}
+
+.card-title {
+    margin-bottom: 1%; /* 제목 아래의 마진 */
+}
+
+.card-text {
+    font-size: 90%; /* 텍스트 크기 조정 */
+    color: #555; /* 색상 변경 */
+}
+
+.header-image-container {
+    position: fixed;
+    width: 100%;
+    display: block;
+    z-index: 1000;
+}
+
+.header-image {
+    width: 100%;
+    height: 20vh; /* 뷰포트 높이의 20% */
+    object-fit: cover;
+}
+
+.header-flex-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh; /* 뷰포트 높이의 20% */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%; /* 양쪽 패딩을 전체 너비의 5%로 설정 */
+}
+
+.image-title {
+    font-size: 3vh; /* 뷰포트 높이의 3% */
+    color: white;
+    font-weight: bold;
+    text-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    padding-top: 22vh; /* 헤더 높이보다 약간 큰 값으로 설정 */
+}
+
+.search-container {
+    display: flex;
+    width: 25%; /* 검색창의 너비를 전체의 25%로 설정 */
+}
+
+.search-input {
+    flex-grow: 1;
+    margin-right: 0.5%;
+}
+
+.input-group .form-control {
+    height: 3vh; /* 입력 필드 높이를 뷰포트 높이의 3%로 조정 */
+    border-radius: 0.5vh; /* 둥근 처리의 크기 조정 */
+    border: 1px solid #ccc;
+}
+
+.input-group .btn {
+    height: 3vh; /* 버튼 높이 입력 필드와 동일하게 조정 */
+    border-radius: 0 0.5vh 0.5vh 0;
+    background-color: #007bff;
+    color: white;
+}
