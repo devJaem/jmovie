@@ -42,7 +42,7 @@
     padding-top: 22vh; 
 }
 
-
+/* 검색, 입력 영역 */
 .search-container {
     display: flex;
     width: 25%; 
