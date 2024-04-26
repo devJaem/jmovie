@@ -7,7 +7,7 @@ const options = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmMjRjOGQxOTRkYzI4MGE0N2E0MmY5ZGRhMWJjOGMxZiIsInN1YiI6IjY2MjllYjVlODg2MzQ4MDExZmFlMzcyMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.o72XzIASnnxekdv0Q8nwuya_5kYGc5X4C_VOKl9zJTg'
     }
 };
 
@@ -31,7 +31,8 @@ const createMovie = movie => {
     const overviewElement = document.createElement('p');
     const voteAverageElement = document.createElement('p');
     
-    card.className = 'card mb-3'; // Bootstrap 클래스 추가
+    card.className = 'card mb-4'; 
+    //부트스트랩 여백
     
     image.src = `https://image.tmdb.org/t/p/w500${poster_path}`;
     image.className = "card-img-top";
@@ -66,7 +67,8 @@ const showMovies = movies => {
     movies.forEach(movie => {
         const movieCard = createMovie(movie);
         const colDiv = document.createElement('div');
-        colDiv.className = 'col-lg-3';
+        colDiv.className = 'col-lg-4';
+        //부트스트랩 카드 배치갯수
         colDiv.appendChild(movieCard);
         cardContainer.appendChild(colDiv);
 
