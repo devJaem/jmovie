@@ -97,3 +97,8 @@ searchInput.addEventListener('keyup', event => {
         searchMovies();
     }
 });
+
+// 검색 입력란 커서
+window.onload = () => {
+    searchInput.focus(); // 페이지 로드 시 검색 입력란에 포커스 주기
+};
