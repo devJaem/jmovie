@@ -35,4 +35,7 @@
     - 여러분의 챌린지는 언제나 환영합니다. 필수 요구사항이 완료되었다면, 자유롭게 추가기능을 넣어주세요.
     - 단, 우선순위는 필수요구사항임을 명심해주세요!
 
-## 코드작성과정은 mds 폴더내에 따로 작성
+## 상세설명
+[scrip.js](https://github.com/devJaem/jmovie/blob/main/mds/script.md)
+[index.html](https://github.com/devJaem/jmovie/blob/main/mds/html.md)
+[style.css](https://github.com/devJaem/jmovie/blob/main/mds/css.md)
