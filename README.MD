@@ -38,5 +38,7 @@
 ## 상세설명
 --- 
 ![scrip.js](https://github.com/devJaem/jmovie/blob/main/mds/script.md)
+<br>
 ![index.html](https://github.com/devJaem/jmovie/blob/main/mds/html.md)
+<br>
 ![style.css](https://github.com/devJaem/jmovie/blob/main/mds/css.md)
