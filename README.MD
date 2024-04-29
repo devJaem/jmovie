@@ -36,6 +36,7 @@
     - 단, 우선순위는 필수요구사항임을 명심해주세요!
 
 ## 상세설명
-[scrip.js](https://github.com/devJaem/jmovie/blob/main/mds/script.md)
-[index.html](https://github.com/devJaem/jmovie/blob/main/mds/html.md)
-[style.css](https://github.com/devJaem/jmovie/blob/main/mds/css.md)
+--- 
+![scrip.js](https://github.com/devJaem/jmovie/blob/main/mds/script.md)
+![index.html](https://github.com/devJaem/jmovie/blob/main/mds/html.md)
+![style.css](https://github.com/devJaem/jmovie/blob/main/mds/css.md)
