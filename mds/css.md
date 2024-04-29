@@ -66,12 +66,18 @@
     border: 1px solid #ccc;
 }
 
+.input-group .btn {
+    height: 3vh; 
+    border-radius: 0 0.5vh 0.5vh 0;
+    background-color: #007bff;
+    color: white;
+}
+
 /* 카드 영역 */
-.card {
-    margin-bottom: 2%; 
-    border-radius: 1%; 
-    box-shadow: 0 0.5% 1% rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
+.card-body {
+    padding: 1.5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 8%; /* 그림자 효과 */
 }
 
 .card-img-top {

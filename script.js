@@ -13,7 +13,7 @@ const options = {
 };
 
 // API 정보 받아오기
-fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', options)
+fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
     .then(response => response.json())
     .then(data => {
         allMovies = data.results;
@@ -23,7 +23,7 @@ fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', options
 
 // 카드를 생성하는 함수
 const createMovie = movie => {
-    const { id, name, overview, poster_path, vote_average } = movie;
+    const { id, name, overview, poster_path: posterPath, vote_average: voteAverage } = movie;
 
     const card = document.createElement('div');
     const image = document.createElement('img');
@@ -32,7 +32,7 @@ const createMovie = movie => {
     const overviewElement = document.createElement('p');
     const voteAverageElement = document.createElement('p');
     
-    image.src = `https://image.tmdb.org/t/p/w500${poster_path}`;
+    image.src = `https://image.tmdb.org/t/p/w500/${posterPath}`;
     image.className = "card-img-top";
     image.alt = `${name} Poster`;
     cardBody.className = 'card-body';
@@ -41,7 +41,7 @@ const createMovie = movie => {
     overviewElement.className = 'card-text';
     overviewElement.textContent = overview;
     voteAverageElement.className = 'text-muted';
-    voteAverageElement.textContent = `Rating: ${vote_average}/10`;
+    voteAverageElement.textContent = `Rating: ${voteAverage}/10`;
 
     cardBody.appendChild(titleElement);
     cardBody.appendChild(overviewElement);
@@ -88,7 +88,7 @@ searchInput.addEventListener('keyup', event => {
     }
 });
 
-// 검색 입력란 커서
+// 검색 입력란 커서 (반영))
 window.onload = () => {
-    searchInput.focus(); 
+    searchInput.focus();
 };

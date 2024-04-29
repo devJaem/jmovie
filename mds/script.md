@@ -19,7 +19,7 @@ let allMovies = []; // 저장할 배열
       }
     };
     
-    fetch('https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1', options)
+    fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
       .then(response => response.json())
       .then(response => console.log(response))
       .catch(err => console.error(err));
@@ -32,7 +32,7 @@ let allMovies = []; // 저장할 배열
     ```jsx
     const createMovie = movie => {
         // json 내부의 키값중, 사용할 값을 생성한다.
-        const { id, name, overview, poster_path, vote_average } = movie;
+            const { id, name, overview, poster_path: posterPath, vote_average: voteAverage } = movie;
     	
     		// 부트스트랩 -> card를 활용해서, 각 항목을 태그로 감싸놓는다
         const card = document.createElement('div');
@@ -43,7 +43,7 @@ let allMovies = []; // 저장할 배열
         const voteAverageElement = document.createElement('p');
         
         // JSON의 이미지 정보를 추춣해서 내 Img 태그에 넣는다
-        image.src = `https://image.tmdb.org/t/p/w500${poster_path}`;
+        image.src = `https://image.tmdb.org/t/p/w500/${posterPath}`;
         image.className = "card-img-top";
         image.alt = `${name} Poster`;
     
@@ -57,7 +57,7 @@ let allMovies = []; // 저장할 배열
         overviewElement.textContent = overview;
     		// 평점
         voteAverageElement.className = 'text-muted';
-        voteAverageElement.textContent = `Rating: ${vote_average}/10`;
+        voteAverageElement.textContent = `Rating: ${voteAverage}/10`;
     
     		// 실제 카드를 생성하기위한 정보를 적제한다.
         cardBody.appendChild(titleElement);
