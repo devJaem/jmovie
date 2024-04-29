@@ -23,7 +23,7 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', opti
 
 // 카드를 생성하는 함수
 const createMovie = movie => {
-    const { id, name, overview, poster_path: posterPath, vote_average: voteAverage } = movie;
+    const { id, title, overview, poster_path: posterPath, vote_average: voteAverage } = movie;
 
     const card = document.createElement('div');
     const image = document.createElement('img');
@@ -34,10 +34,10 @@ const createMovie = movie => {
     
     image.src = `https://image.tmdb.org/t/p/w500/${posterPath}`;
     image.className = "card-img-top";
-    image.alt = `${name} Poster`;
+    image.alt = `${title} Poster`;
     cardBody.className = 'card-body';
     titleElement.className = 'card-title';
-    titleElement.textContent = name;
+    titleElement.textContent = title;
     overviewElement.className = 'card-text';
     overviewElement.textContent = overview;
     voteAverageElement.className = 'text-muted';
@@ -75,7 +75,7 @@ const showMovies = movies => {
 const searchMovies = () => {
     const searchItem = searchInput.value.toLowerCase();
     const filteredMovies = allMovies.filter(movie =>
-        movie.name && movie.name.toLowerCase().includes(searchItem)
+        movie.title && movie.title.toLowerCase().includes(searchItem)
     );
     showMovies(filteredMovies);
 };

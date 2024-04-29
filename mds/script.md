@@ -41,7 +41,7 @@ let allMovies = []; // 저장할 배열
         const titleElement = document.createElement('h5');
         const overviewElement = document.createElement('p');
         const voteAverageElement = document.createElement('p');
-        
+
         // JSON의 이미지 정보를 추춣해서 내 Img 태그에 넣는다
         image.src = `https://image.tmdb.org/t/p/w500/${posterPath}`;
         image.className = "card-img-top";
