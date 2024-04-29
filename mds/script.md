@@ -32,11 +32,11 @@ let allMovies = []; // 저장할 배열
     ```jsx
     const createMovie = movie => {
         // json 내부의 키값중, 사용할 값을 생성한다.
-            const { id, name, overview, poster_path: posterPath, vote_average: voteAverage } = movie;
+            const { id, title, overview, poster_path: posterPath, vote_average: voteAverage } = movie;
     	
     		// 부트스트랩 -> card를 활용해서, 각 항목을 태그로 감싸놓는다
         const card = document.createElement('div');
-        const image = document.createElement('img');
+        const title = document.createElement('img');
         const cardBody = document.createElement('div');
         const titleElement = document.createElement('h5');
         const overviewElement = document.createElement('p');
@@ -45,13 +45,13 @@ let allMovies = []; // 저장할 배열
         // JSON의 이미지 정보를 추춣해서 내 Img 태그에 넣는다
         image.src = `https://image.tmdb.org/t/p/w500/${posterPath}`;
         image.className = "card-img-top";
-        image.alt = `${name} Poster`;
+        image.alt = `${title} Poster`;
     
     		// 카드 전체 공간
         cardBody.className = 'card-body';
     		// 영화 제목 
         titleElement.className = 'card-title';
-        titleElement.textContent = name;
+        titleElement.textContent = title;
     		// 설명
         overviewElement.className = 'card-text';
         overviewElement.textContent = overview;
@@ -109,7 +109,7 @@ let allMovies = []; // 저장할 배열
         // 2. 각 영화 객체의 이름(movie.name)이 있고, 검색어(searchItem)포함하는지 확인
         //    대소문자를 구분하지 않기 위해 모든 문자열을 소문자로 변환
         const filteredMovies = allMovies.filter(movie =>
-            movie.name && movie.name.toLowerCase().includes(searchItem)
+            movie.title && movie.title.toLowerCase().includes(searchItem)
         );
         // 필터링된 영화 전달
         showMovies(filteredMovies);

@@ -35,9 +35,15 @@
     - 여러분의 챌린지는 언제나 환영합니다. 필수 요구사항이 완료되었다면, 자유롭게 추가기능을 넣어주세요.
     - 단, 우선순위는 필수요구사항임을 명심해주세요!
 
-## 상세설명
-![scrip](https://github.com/devJaem/jmovie/blob/main/mds/script.md)
+## 상세설명 바로가기
+[Script.js](https://github.com/devJaem/jmovie/blob/main/mds/script.md)
 <br>
-![index](https://github.com/devJaem/jmovie/blob/main/mds/html.md)
+[Index.html](https://github.com/devJaem/jmovie/blob/main/mds/html.md)
 <br>
-![style](https://github.com/devJaem/jmovie/blob/main/mds/css.md)
+[Style.css](https://github.com/devJaem/jmovie/blob/main/mds/css.md)
+
+
+## 타임라인
+#### 24.04.25 프로젝트 시작
+#### 24.04.26 프로젝트 완료후 사전제출
+#### 24.04.29 튜터님 피드백 반영완료 (그리드는 사용하지 않음)
